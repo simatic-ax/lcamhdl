@@ -1,11 +1,14 @@
 # General information
-name: "lcamhdl"
+name: "@simatic-ax/lcamhdl"
 version: 0.0.0-placeholder
 author: Siemens AG
 
 # Description will be displayed in the apax extension
-description: <add your description here, which will be shown in the apax extension>
+description: Create cam profiles at runtime.
 type: lib
+
+keywords:
+  - library
 
 #URL to the repository
 repository:
@@ -15,7 +18,6 @@ repository:
 # Targets which will be compiled with 'apax build'
 targets:
   - "1500"
-  - "llvm"
 
 # Registry information, to other npm-registries where Apax packages are located
 # '@scope': 'registry-url'
@@ -30,7 +32,6 @@ publicKeys:
 # Dependencies
 devDependencies:
   '@ax/sdk': ^2504.0.0
-  "@simatic-ax/snippetscollection": ^1.0.0
 
 # Project variables
 variables:
@@ -43,7 +44,6 @@ files:
   - 'LICENSE.md'
   - 'docs'
   - 'bin'
-  - 'snippets'
 
 # Catalog to be intalled
 catalogs:
