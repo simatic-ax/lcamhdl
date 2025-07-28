@@ -1,6 +1,6 @@
 # General information
 name: "@simatic-ax/lcamhdl"
-version: 0.0.0-placeholder
+version: 1.0.0
 author: Siemens AG
 
 # Description will be displayed in the apax extension
@@ -30,8 +30,12 @@ publicKeys:
   "@simatic-ax": "3792a7e926775425ccdd29ceed8c368c3008b5b33d7d5550b3cb1f58093e1dff"
 
 # Dependencies
+dependencies:
+  "@ax/simatic-1500-motioncontrol-native-v9": 9.0.1
+  "@ax/system": 10.0.24
+
 devDependencies:
-  '@ax/sdk': ^2504.0.0
+  "@ax/sdk": ^2504.0.0
 
 # Project variables
 variables:
