@@ -53,7 +53,7 @@ Comprehensive documentation is available in the [docs](./docs) directory:
 USING Simatic.Ax.LCamHdl;
 USING Siemens.Simatic.S71500.MotionControl.Native;
 
-PROGRAM Main
+PROGRAM MainProgram
 VAR
     camProfile : ARRAY[1..5] OF LCamHdl_typeBasicPoint;
     cam : REF_TO TO_Cam;
@@ -97,9 +97,9 @@ createCamBasic(
 
 // Check results
 IF createCamBasic.done THEN
-    // Cam profile created successfully
+    ;// Cam profile created successfully
 ELSIF createCamBasic.error THEN
-    // Error occurred, check status and diagnostics
+    ;// Error occurred, check status and diagnostics
 END_IF;
 END_PROGRAM
 ```
