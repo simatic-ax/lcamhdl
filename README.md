@@ -6,7 +6,7 @@ The LCamHdl library provides functionality for creating cam disks at runtime in 
 
 Cam disks are used in motion control applications to define the relationship between a leading axis (master) and a following axis (slave). The library provides various methods to create and analyze cam profiles with different mathematical approaches.
 
-The library is a direct conversion of the functionally identical library [LCamHdl](https://support.industry.siemens.com/cs/document/105644659/simatic-creation-of-cam-disks-at-runtime-(lcamhdl)?dti=0&lc=en-WW) for use inside the TIA Portal
+The library is a direct conversion of the functionally identical library [LCamHdl](https://support.industry.siemens.com/cs/ww/en/view/105644659) for use inside the TIA Portal
 
 ## Key Features
 
