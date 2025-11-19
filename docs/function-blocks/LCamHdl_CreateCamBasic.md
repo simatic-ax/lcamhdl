@@ -117,7 +117,7 @@ Then, implement the function block that uses the cam profile:
 
 ```iec-st
 USING Simatic.Ax.LCamHdl;
-USING Siemens.Simatic.S71500.MotionControl.Native;
+USING Siemens.Simatic.MotionControl.Native;
 NAMESPACE LCamHdl.Tests
     FUNCTION_BLOCK TestCreateCamBasic
         VAR_INPUT
@@ -159,7 +159,7 @@ END_NAMESPACE
 Finally, use the function block in your program:
 
 ```iec-st
-USING Siemens.Simatic.S71500.MotionControl.Native;
+USING Siemens.Simatic.MotionControl.Native;
 PROGRAM Main
 VAR
     testCreateCamBasic : LCamHdl.Tests.TestCreateCamBasic;

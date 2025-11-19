@@ -68,7 +68,7 @@ See [Function Characteristics](./Function_Characteristics.md)
 First, define the cam profile points in a configuration file:
 
 ```iec-st
-USING Siemens.Simatic.S71500.MotionControl.Native;
+USING Siemens.Simatic.MotionControl.Native;
 CONFIGURATION XYPointConfiguration
     VAR_GLOBAL
         profile : ARRAY[1..5] OF TO_Cam_Struct_PointData := [
@@ -89,7 +89,7 @@ Then, implement the function block that uses the cam profile:
 
 ```iec-st
 USING Simatic.Ax.LCamHdl;
-USING Siemens.Simatic.S71500.MotionControl.Native;
+USING Siemens.Simatic.MotionControl.Native;
 NAMESPACE LCamHdl.Tests
     FUNCTION_BLOCK TestCreateCamBasedOnXYPoints
         VAR_INPUT
@@ -131,7 +131,7 @@ END_NAMESPACE
 Finally, use the function block in your program:
 
 ```iec-st
-USING Siemens.Simatic.S71500.MotionControl.Native;
+USING Siemens.Simatic.MotionControl.Native;
 PROGRAM Main
 VAR
     testCreateCamBasedOnXYPoints : LCamHdl.Tests.TestCreateCamBasedOnXYPoints;

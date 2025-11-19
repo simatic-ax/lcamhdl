@@ -29,7 +29,7 @@ The `LCamHdl_GetStatusWord` function block is splitting the status wordof a TO_C
 
 ```iec-st
 USING Simatic.Ax.LCamHdl;
-USING Siemens.Simatic.S71500.MotionControl.Native;
+USING Siemens.Simatic.MotionControl.Native;
 
 PROGRAM Use10kStatusProgram
     VAR_INPUT

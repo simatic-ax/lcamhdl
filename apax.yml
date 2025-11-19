@@ -27,12 +27,19 @@ registries:
 # The public key to verify dependencies coming from the GitHub community. This ensures, that the package is
 # not tampered with.
 publicKeys:
-  "@simatic-ax": "3792a7e926775425ccdd29ceed8c368c3008b5b33d7d5550b3cb1f58093e1dff"
+  "@simatic-ax":
+    "v1": "3792a7e926775425ccdd29ceed8c368c3008b5b33d7d5550b3cb1f58093e1dff"
+    "v2": "7af3e394eb2b285a3d99ab8e1f745cc6db75704b30a80393339c721a92ffffd9"
+
+# Catalog to be intalled
+catalogs:
+  "@ax/simatic-ax": ^2510.0.0
+
 
 # Dependencies
 dependencies:
-  "@ax/simatic-1500-motioncontrol-native-v9": 9.0.1
-  "@ax/system": 10.0.24
+  "@ax/simatic-motioncontrol-native-v9": 10.0.9
+  "@ax/system": 10.2.7
 
 devDependencies:
   "@ax/sdk": ^2510.0.0
@@ -49,6 +56,3 @@ files:
   - 'docs'
   - 'bin'
 
-# Catalog to be intalled
-catalogs:
-  "@ax/simatic-ax": ^2510.0.0

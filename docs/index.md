@@ -140,7 +140,7 @@ END_CONFIGURATION
 
 ```iec-st
 USING Simatic.Ax.LCamHdl;
-USING Siemens.Simatic.S71500.MotionControl.Native;
+USING Siemens.Simatic.MotionControl.Native;
 PROGRAM CreateCamBasicProg
     VAR_EXTERNAL
         profileBasic : ARRAY[1..8] OF LCamHdl_typeBasicPoint;
@@ -182,7 +182,7 @@ END_PROGRAM
 #### Configuration
 
 ```iec-st
-USING Siemens.Simatic.S71500.MotionControl.Native;
+USING Siemens.Simatic.MotionControl.Native;
 CONFIGURATION XYPointConfiguration
     VAR_GLOBAL
         profileXY : ARRAY[1..16] OF TO_Cam_Struct_PointData := [
@@ -212,7 +212,7 @@ END_CONFIGURATION
 
 ```iec-st
 USING Simatic.Ax.LCamHdl;
-USING Siemens.Simatic.S71500.MotionControl.Native;
+USING Siemens.Simatic.MotionControl.Native;
 
 PROGRAM CreateCamXYProg
     VAR_EXTERNAL

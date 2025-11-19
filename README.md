@@ -51,7 +51,7 @@ Comprehensive documentation is available in the [docs](./docs) directory:
 
 ```iec-st
 USING Simatic.Ax.LCamHdl;
-USING Siemens.Simatic.S71500.MotionControl.Native;
+USING Siemens.Simatic.MotionControl.Native;
 
 PROGRAM MainProgram
 VAR
