@@ -17,14 +17,14 @@ function block `LCamHdl_GetCamFollowingMinMax`.
 The function calculates the maximum output values using the following equations:
 
 ```math
-v_{Slave} = s\rq \cdot v_{Master} \newline
-a_{Slave} = s\rq\rq \cdot v_{Master}^2 \newline
-j_{Slave} = s\rq\rq\rq \cdot v_{Master}^3
+v_{Slave} = s' \cdot v_{Master} \newline
+a_{Slave} = s'' \cdot v_{Master}^2 \newline
+j_{Slave} = s''' \cdot v_{Master}^3
 ```
 
-$𝑠\rq$ - following axis first derivative (min / max) <br>
-$𝑠\rq\rq$ - following axis second derivative (min / max) <br>
-$𝑠\rq\rq\rq$ - following axis third derivative (min / max)
+$𝑠'$ - following axis first derivative (min / max) <br>
+$𝑠''$ - following axis second derivative (min / max) <br>
+$𝑠'''$ - following axis third derivative (min / max)
 
 ## Interface
 
