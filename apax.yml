@@ -31,8 +31,8 @@ publicKeys:
 
 # Dependencies
 dependencies:
-  "@ax/simatic-1500-motioncontrol-native-v9": 9.0.1
-  "@ax/system": 10.0.24
+  "@ax/simatic-1500-motioncontrol-native-v9": 9.0.3
+  "@ax/system": 10.3.25
 
 devDependencies:
   "@ax/sdk": ^2504.0.0
