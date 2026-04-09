@@ -1,7 +1,7 @@
-# LCamHdl_AddCam10kPolynomial
+# AddCam10kPolynomial
 
-The function block `LCamHdl_AddCam10kPolynomial` is a copy of the function
-block [LCamHdl_AddCamPolynomial](./LCamHdl_AddCamPolynomial.md). The "..10k.." version enables using a cam
+The function block `AddCam10kPolynomial` is a copy of the function
+block [AddCamPolynomial](./LCamHdl_AddCamPolynomial.md). The "..10k.." version enables using a cam
 technology object of type `TO_Cam_10k` instead of `TO_Cam`.
 
 ## Interface
@@ -9,28 +9,28 @@ technology object of type `TO_Cam_10k` instead of `TO_Cam`.
 ### Input Parameters
 
 | Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
+| --------- | ---- | ------- | ----------- |
 | `execute` | `BOOL` | `FALSE` | Rising edge starts action once |
 | `numberOfElements` | `INT` | `-1` | Number of used array elements of camProfile (-1 for whole array) |
 | `startSegmentIndex` | `INT` | `1` | Start index of cam segment data (1-50) |
-| `config` | [`LCamHdl_typePolynomialConfig`](../types/LCamHdl_typePolynomialConfig.md) | - | Config for interpolating the cam disk and deleting preceding or successive cam points/segments |
+| `config` | [`typePolynomialConfig`](../types/LCamHdl_typePolynomialConfig.md) | - | Config for interpolating the cam disk and deleting preceding or successive cam points/segments |
 
 ### Output Parameters
 
 | Parameter | Type | Description |
-|-----------|------|-------------|
+| --------- | ---- | ----------- |
 | `done` | `BOOL` | TRUE: Commanded action has been completed successfully |
 | `busy` | `BOOL` | TRUE: FB is not finished and new output values can be expected |
 | `error` | `BOOL` | TRUE: Rising edge informs that an error occurred during the execution of the FB |
-| `status` | [`LCamHdl_AddCamPolynomialStatus`](../types/StatusCodes/LCamHdl_AddCamPolynomialStatus.md) | 16#0000 - 16#7FFF: Status of the FB, 16#8000 - 16#FFFF: Error identification |
+| `status` | [`AdvancedStatus`](../types/StatusCodes/LCamHdl_AdvancedStatus.md) | 16#0000 - 16#7FFF: Status of the FB, 16#8000 - 16#FFFF: Error identification |
 | `nextSegmentIndex` | `INT` | Next "empty" segment index |
-| `diagnostics` | [`LCamHdl_typeDiagnostics`](../types/LCamHdl_typeDiagnostics.md) | Diagnostics information of FB |
+| `diagnostics` | [`typeDiagnostics`](../types/LCamHdl_typeDiagnostics.md) | Diagnostics information of FB |
 
 ### In/Out Parameters
 
 | Parameter | Type | Description |
-|-----------|------|-------------|
-| `camProfile` | `ARRAY[*] OF` [`LCamHdl_typePolynomialElement`](../types/LCamHdl_typePolynomialElement.md) | Definition of the cam disk to be created |
+| --------- | ---- | ----------- |
+| `camProfile` | `ARRAY[*] OF` [`typePolynomialElement`](../types/LCamHdl_typePolynomialElement.md) | Definition of the cam disk to be created |
 | `cam` | `TO_Cam_10k` | Technology object cam disk (10k) |
 
 ### Status Codes
@@ -38,7 +38,7 @@ technology object of type `TO_Cam_10k` instead of `TO_Cam`.
 #### Operation Status Codes (16#0000 - 16#7FFF)
 
 | Code | Name | Description |
-|------|------|-------------|
+| ---- | ---- | ----------- |
 | 16#0000 | `STATUS_EXECUTION_FINISHED` | FB has created a cam successfully |
 | 16#7000 | `STATUS_NO_CALL` | No call of FB |
 | 16#7001 | `STATUS_FIRST_CALL` | First call of FB after enabling |
@@ -47,7 +47,7 @@ technology object of type `TO_Cam_10k` instead of `TO_Cam`.
 #### Error Status Codes (16#8000 - 16#FFFF)
 
 | Code | Name | Description |
-|------|------|-------------|
+| ---- | ---- | ----------- |
 | 16#8200 | `ERR_INVALID_PROFILE_TYPE` | Invalid profile type in element no., see diagnostics.errorElementNo |
 | 16#8202 | `ERR_CAM_SEGMENTS_OUT_OF_BOUNDS` | Maximum number of cam segments (50) of the technology object was exceeded |
 | 16#8209 | `ERR_LEADING_RANGE` | The difference between start and end leading value is <= 0 in element no., see diagnostics.errorElementNo |

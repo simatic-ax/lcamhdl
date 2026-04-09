@@ -1,15 +1,15 @@
-# LCamHdl_CreateCamAdvanced
+# CreateCamAdvanced
 
 ## Prinicple of operation
 
 A cam disk can be created at runtime with a SIMATIC S7-1500T CPU. Segments with the profile types described in this document as well as points can be used to define a cam. Gaps between the segments and/or points are interpolated by the runtime system with the interpolation method chosen in the selected technology object cam.
 
 A maximum number of 50 segments and 1000 points in a cam profile can be used to define a cam.
-The function block `LCamHdl_CreateCamAdvanced` fills the necessary segments and points in the cam technology object starting at startSegmentIndex and startPointIndex.
+The function block `CreateCamAdvanced` fills the necessary segments and points in the cam technology object starting at startSegmentIndex and startPointIndex.
 
 The function block can be configured to delete preceding or successive cam points and cam segments. In addition it is possible to interpolate the cam disk at the end with the interpolateCam configuration bit.
 
-The default configuration has to be changed when using the `LCamHdl_CreateCamAdvanced` function block with additional function blocks.
+The default configuration has to be changed when using the `CreateCamAdvanced` function block with additional function blocks.
 
 ## Function Characteristics
 
@@ -20,30 +20,30 @@ See [Function Characteristics](./Function_Characteristics.md)
 ### Input Parameters
 
 | Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
+| --------- | ---- | ------- | ----------- |
 | `execute` | `BOOL` | `FALSE` | Rising edge starts action once |
 | `numberOfElements` | `INT` | `-1` | Number of used array elements of camProfile (-1 for whole array) |
 | `startSegmentIndex` | `INT` | `1` | Start index of cam segment data (1-50) |
 | `startPointIndex` | `INT` | `1` | Start index of cam point data (1-1000) |
-| `config` | [`LCamHdl_typeAdvancedConfig`](../types/LCamHdl_typeAdvancedConfig.md) | - | Config for interpolating the cam disk and deleting preceding or successive cam points/segments |
+| `config` | [`typeAdvancedConfig`](../types/LCamHdl_typeAdvancedConfig.md) | - | Config for interpolating the cam disk and deleting preceding or successive cam points/segments |
 
 ### Output Parameters
 
 | Parameter | Type | Description |
-|-----------|------|-------------|
+| --------- | ---- | ----------- |
 | `done` | `BOOL` | TRUE: Commanded action has been completed successfully |
 | `busy` | `BOOL` | TRUE: FB is not finished and new output values can be expected |
 | `error` | `BOOL` | TRUE: Rising edge informs that an error occurred during the execution of the FB |
-| `status` | [`LCamHdl_CreateCamAdvancedStatus`](../types/StatusCodes/LCamHdl_CreateCamAdvancedStatus.md) | 16#0000 - 16#7FFF: Status of the FB, 16#8000 - 16#FFFF: Error identification |
+| `status` | [`AdvancedStatus`](../types/StatusCodes/LCamHdl_AdvancedStatus.md) | 16#0000 - 16#7FFF: Status of the FB, 16#8000 - 16#FFFF: Error identification |
 | `nextSegmentIndex` | `INT` | Next "empty" segment index |
 | `nextPointIndex` | `INT` | Next "empty" point index |
-| `diagnostics` | [`LCamHdl_typeDiagnostics`](../types/LCamHdl_typeDiagnostics.md) | Diagnostics information of FB |
+| `diagnostics` | [`typeDiagnostics`](../types/LCamHdl_typeDiagnostics.md) | Diagnostics information of FB |
 
 ### In/Out Parameters
 
 | Parameter | Type | Description |
-|-----------|------|-------------|
-| `camProfile` | `ARRAY[*] OF` [`LCamHdl_typeAdvancedElement`](../types/LCamHdl_typeAdvancedElement.md) | Definition of the cam disk to be created |
+| --------- | ---- | ----------- |
+| `camProfile` | `ARRAY[*] OF` [`typeAdvancedElement`](../types/LCamHdl_typeAdvancedElement.md) | Definition of the cam disk to be created |
 | `cam` | `TO_Cam` | Technology object cam disk |
 
 ### Status Codes
@@ -51,7 +51,7 @@ See [Function Characteristics](./Function_Characteristics.md)
 #### Operation Status Codes (16#0000 - 16#7FFF)
 
 | Code | Name | Description |
-|------|------|-------------|
+| ---- | ---- | ----------- |
 | 16#0000 | `STATUS_EXECUTION_FINISHED` | FB has created a cam successfully |
 | 16#7000 | `STATUS_NO_CALL` | No call of FB |
 | 16#7001 | `STATUS_FIRST_CALL` | First call of FB after enabling |
@@ -60,7 +60,7 @@ See [Function Characteristics](./Function_Characteristics.md)
 #### Error Status Codes (16#8000 - 16#FFFF)
 
 | Code | Name | Description |
-|------|------|-------------|
+| ---- | ---- | ----------- |
 | 16#8200 | `ERR_INVALID_PROFILE_TYPE` | Invalid profile type in element no., see diagnostics.errorElementNo |
 | 16#8201 | `ERR_CAM_POINTS_OUT_OF_BOUNDS` | Maximum number of cam points (1000) of the technology object was exceeded |
 | 16#8202 | `ERR_CAM_SEGMENTS_OUT_OF_BOUNDS` | Maximum number of cam segments (50) of the technology object was exceeded |
