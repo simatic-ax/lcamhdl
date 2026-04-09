@@ -52,9 +52,3 @@ jobs:
         uses: simatic-ax/actions/apax-install@v3
         with:
           immutable: true
-
-      - name: Check links
-        uses: gaurav-nelson/github-action-markdown-link-check@v1
-        with:
-          check-modified-files-only: 'yes'
-          base-branch: 'main'

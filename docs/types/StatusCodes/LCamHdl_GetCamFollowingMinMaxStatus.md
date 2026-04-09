@@ -2,7 +2,7 @@
 
 ## Overview
 
-The named value `GetCamFollowingMinMaxStatus` defines status codes for the [GetCamFollowingMinMax](../../function-blocks/LCamHdl_GetCamFollowingMinMax.md)/[GetCam10kFollowingMinMax](../../function-blocks/LCamHdlGetCam10kFollowingMinMax.md) function blocks.
+The named value `GetCamFollowingMinMaxStatus` defines status codes for the [GetCamFollowingMinMax](../../function-blocks/LCamHdl_GetCamFollowingMinMax.md)/[GetCam10kFollowingMinMax](../../function-blocks/LCamHdl_GetCam10kFollowingMinMax.md) function blocks.
 
 ## Status Codes
 
