@@ -1,4 +1,4 @@
-# LCamHdl_GetCamMaxVeloMaster
+# GetCamMaxVeloMaster
 
 ## Principle of operation
 
@@ -12,21 +12,21 @@ The minimum and maximum following value derivatives can be determined with the f
 The function calculates the maximum master velocity using the following equations:
 
 ```math
-v_{MasterMax_v} = \frac{s'}{v_{LimitSlave}} \newline
-v_{MasterMax_a} = \sqrt{\frac{s''}{a_{LimitSlave}}} \newline
-v_{MasterMax_j} = \left(\frac{s'''}{j_{LimitSlave}}\right)^{1/3}
+v_{MasterMax_v} = \frac{s\rq}{v_{LimitSlave}} \newline
+v_{MasterMax_a} = \sqrt{\frac{s\rq\rq}{a_{LimitSlave}}} \newline
+v_{MasterMax_j} = \left(\frac{s\rq\rq\rq}{j_{LimitSlave}}\right)^{1/3}
 ```
 
-$𝑠'$ - following axis first derivative (min / max) <br>
-$𝑠''$ - following axis second derivative (min / max) <br>
-$𝑠'''$ - following axis third derivative (min / max)
+$𝑠\rq$ - following axis first derivative (min / max) <br>
+$𝑠\rq\rq$ - following axis second derivative (min / max) <br>
+$𝑠\rq\rq\rq$ - following axis third derivative (min / max)
 
 ## Interface
 
 ### Input Parameters
 
 | Parameter | Type | Description |
-|-----------|------|-------------|
+| --------- | ---- | ----------- |
 | `firstDerivativeMin` | `LREAL` | Cam following value first derivative minimum |
 | `firstDerivativeMax` | `LREAL` | Cam following value first derivative maximum |
 | `secondDerivativeMin` | `LREAL` | Cam following value second derivative minimum |
@@ -40,5 +40,5 @@ $𝑠'''$ - following axis third derivative (min / max)
 ### Output Parameters
 
 | Parameter | Type | Description |
-|-----------|------|-------------|
+| --------- | ---- | ----------- |
 | `maxMasterVelocity` | `LREAL` | Maximum permissible velocity of the master axis to not exceed the maximum slave axis dynamics |

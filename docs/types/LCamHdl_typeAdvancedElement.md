@@ -1,7 +1,7 @@
-# LCamHdl_typeAdvancedElement
+# typeAdvancedElement
 
 | Member | Type | Default Value | Description |
-|--------|------|---------------|-------------|
+| ------ | ---- | ------------- | ----------- |
 | `leadingValueStart` | `LREAL` | - | Leading value at the beginning of the element |
 | `leadingValueEnd` | `LREAL` | - | Leading value at the end of the element |
 | `followingValueStart` | `LREAL` | - | Following value at the beginning of the element |

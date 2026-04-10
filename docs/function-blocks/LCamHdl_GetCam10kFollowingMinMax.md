@@ -1,7 +1,7 @@
-# LCamHdl_GetCam10kFollowingMinMax
+# GetCam10kFollowingMinMax
 
-The function block `LCamHdl_GetCam10kFollowingMinMax` is a copy of the
-function block [LCamHdl_GetCamFollowingMinMax](./LCamHdl_GetCamFollowingMinMax.md). The "..10k.." version enables
+The function block `GetCam10kFollowingMinMax` is a copy of the
+function block [GetCamFollowingMinMax](./LCamHdl_GetCamFollowingMinMax.md). The "..10k.." version enables
 using a cam technology object of type `TO_Cam_10k` instead of `TO_Cam`.
 
 ## Interface
@@ -9,7 +9,7 @@ using a cam technology object of type `TO_Cam_10k` instead of `TO_Cam`.
 ### Input Parameters
 
 | Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
+| --------- | ---- | ------- | ----------- |
 | `execute` | `BOOL` | `FALSE` | Rising edge starts action once |
 | `specificRange` | `BOOL` | `FALSE` | TRUE: Determine minima and maxima in a specified subrange; FALSE: Determine minima and maxima in the complete leading value range (definition range) of the cam disk |
 | `startPosition` | `LREAL` | `0.0` | Start position of the specific range for determining the minima and maxima (only relevant if 'specificRange' = TRUE). Note: value must be within the leading value range (definition range) of the cam disk AND 'startPosition' < 'endPosition', otherwise the complete leading value range is used |
@@ -25,11 +25,11 @@ using a cam technology object of type `TO_Cam_10k` instead of `TO_Cam`.
 ### Output Parameters
 
 | Parameter | Type | Description |
-|-----------|------|-------------|
+| --------- | ---- | ----------- |
 | `done` | `BOOL` | TRUE: Commanded functionality has been completed successfully |
 | `busy` | `BOOL` | TRUE: FB is not finished and new output values can be expected |
 | `error` | `BOOL` | TRUE: An error occurred during the execution of the FB |
-| `status` | [`LCamHdl_GetCamFollowingMinMaxStatus`](../types/StatusCodes/LCamHdl_GetCamFollowingMinMaxStatus.md) | 16#0000 - 16#7FFF: Status of the FB, 16#8000 - 16#FFFF: Error identification |
+| `status` | [`GetCamFollowingMinMaxStatus`](../types/StatusCodes/LCamHdl_GetCamFollowingMinMaxStatus.md) | 16#0000 - 16#7FFF: Status of the FB, 16#8000 - 16#FFFF: Error identification |
 | `followingValueMin` | `LREAL` | Cam following value minimum (valid when 'done' = TRUE) |
 | `followingValueMax` | `LREAL` | Cam following value maximum (valid when 'done' = TRUE) |
 | `firstDerivativeMin` | `LREAL` | Cam following value first derivative minimum (valid when 'done' = TRUE) |
@@ -38,12 +38,12 @@ using a cam technology object of type `TO_Cam_10k` instead of `TO_Cam`.
 | `secondDerivativeMax` | `LREAL` | Cam following value second derivative maximum (valid when 'done' = TRUE) |
 | `thirdDerivativeMin` | `LREAL` | Cam following value third derivative minimum (valid when 'done' = TRUE) |
 | `thirdDerivativeMax` | `LREAL` | Cam following value third derivative maximum (valid when 'done' = TRUE) |
-| `diagnostics` | [`LCamHdl_typeDiagnostics`](../types/LCamHdl_typeDiagnostics.md) | Diagnostics information of FB |
+| `diagnostics` | [`typeDiagnostics`](../types/LCamHdl_typeDiagnostics.md) | Diagnostics information of FB |
 
 ### In/Out Parameters
 
 | Parameter | Type | Description |
-|-----------|------|-------------|
+| --------- | ---- | ----------- |
 | `cam` | `TO_Cam_10k` | Reference to the cam disk (10k) |
 
 ### Status Codes
@@ -51,7 +51,7 @@ using a cam technology object of type `TO_Cam_10k` instead of `TO_Cam`.
 #### Operation Status Codes (16#0000 - 16#7FFF)
 
 | Code | Name | Description |
-|------|------|-------------|
+| ---- | ---- | ----------- |
 | 16#0000 | `STATUS_EXECUTION_FINISHED` | Execution finished without errors |
 | 16#7000 | `STATUS_NO_CALL` | No job being currently processed |
 | 16#7001 | `STATUS_FIRST_CALL` | First call after incoming new job (rising edge 'execute') |
@@ -60,7 +60,7 @@ using a cam technology object of type `TO_Cam_10k` instead of `TO_Cam`.
 #### Error Status Codes (16#8000 - 16#FFFF)
 
 | Code | Name | Description |
-|------|------|-------------|
+| ---- | ---- | ----------- |
 | 16#8210 | `ERR_TOTAL_NUMBER_OF_SAMPLES` | Invalid totalNumberOfSamples, 2<=totalNumberOfSamples |
 | 16#8211 | `ERR_NUMBER_OF_SAMPLES_PER_CALL` | Invalid numberOfSamplesPerCall, 1<=numberOfSamplesPerCall |
 | 16#8601 | `ERR_INVALID_STATE` | Invalid state of the state machine |

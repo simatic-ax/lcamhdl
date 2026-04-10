@@ -1,26 +1,26 @@
-# LCamHdl_GetCamStatusWord
+# GetCamStatusWord
 
 ## Principle of operation
 
-The `LCamHdl_GetStatusWord` function block is splitting the status wordof a TO_Cam into bits.
+The `GetStatusWord` function block is splitting the status wordof a TO_Cam into bits.
 
 ## Interface
 
 ### In/Out Parameters
 
 | Parameter | Type | Description |
-|-----------|------|-------------|
+| --------- | ---- | ----------- |
 | `cam` | `TO_Cam` | Technology object cam disk |
 
 ### Output Parameters
 
 | Parameter | Type | Description |
-|-----------|------|-------------|
+| --------- | ---- | ----------- |
 | `control` | `BOOL` | TRUE: Cam in use; FALSE: Cam not in use |
 | `error` | `BOOL` | TRUE: Error present; FALSE: No error present |
 | `restartActive` | `BOOL` | TRUE: "Restart" active. The technology object is being reinitialized; FALSE: No "Restart" active |
 | `onlineStarValuesChanged` | `BOOL` | TRUE: The restart tags have been changed. For the changes to be applied, the technology object must be reinitialized; FALSE: Restart tags unchanged |
-| `camDataChanged` |`BOOL` | TRUE: The definition range of the cam has changed in the technology data block; FALSE: No change |
+| `camDataChanged` | `BOOL` | TRUE: The definition range of the cam has changed in the technology data block; FALSE: No change |
 | `interpolated` | `BOOL` | TRUE: Cam is interpolated; FALSE: Cam is not interpolated |
 | `inInterpolation` | `BOOL` | TRUE: Cam is in interpolation; FALSE: Cam is not in interpolation |
 | `copyCamDataActive` | `BOOL` | TRUE: A copy operation of an "MC_CopyCamData" job is active; FALSE: No copy operation of an "MC_CopyCamData" job is active |
