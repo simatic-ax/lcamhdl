@@ -1,7 +1,7 @@
-# LCamHdl_AddCam10kInvSine
+# AddCam10kInvSine
 
-The function block `LCamHdl_AddCam10kInvSine` is a copy of the function block
-[LCamHdl_AddCamInvSine](./LCamHdl_AddCamInvSine.md). The "..10k.." version enables using a cam technology
+The function block `AddCam10kInvSine` is a copy of the function block
+[AddCamInvSine](./LCamHdl_AddCamInvSine.md). The "..10k.." version enables using a cam technology
 object of type `TO_Cam_10k` instead of `TO_Cam`.
 
 ## Interface
@@ -9,28 +9,28 @@ object of type `TO_Cam_10k` instead of `TO_Cam`.
 ### Input Parameters
 
 | Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
+| --------- | ---- | ------- | ----------- |
 | `execute` | `BOOL` | `FALSE` | Rising edge starts action once |
 | `numberOfElements` | `INT` | `-1` | Number of used array elements of camProfile (-1 for whole array) |
 | `startPointIndex` | `INT` | `1` | Start index of cam point data (1-10000) |
-| `config` | [`LCamHdl_typeInvSineConfig`](../types/LCamHdl_typeInvSineConfig.md) | - | Config for interpolating the cam disk and deleting preceding or successive cam points/segments |
+| `config` | [`typeInvSineConfig`](../types/LCamHdl_typeInvSineConfig.md) | - | Config for interpolating the cam disk and deleting preceding or successive cam points/segments |
 
 ### Output Parameters
 
 | Parameter | Type | Description |
-|-----------|------|-------------|
+| --------- | ---- | ----------- |
 | `done` | `BOOL` | TRUE: Commanded action has been completed successfully |
 | `busy` | `BOOL` | TRUE: FB is not finished and new output values can be expected |
 | `error` | `BOOL` | TRUE: Rising edge informs that an error occurred during the execution of the FB |
-| `status` | [`LCamHdl_AddCamInvSineStatus`](../types/StatusCodes/LCamHdl_AddCamInvSineStatus.md) | 16#0000 - 16#7FFF: Status of the FB, 16#8000 - 16#FFFF: Error identification |
+| `status` | [`AdvancedStatus`](../types/StatusCodes/LCamHdl_AdvancedStatus.md) | 16#0000 - 16#7FFF: Status of the FB, 16#8000 - 16#FFFF: Error identification |
 | `nextPointIndex` | `INT` | Next "empty" point index |
-| `diagnostics` | [`LCamHdl_typeDiagnostics`](../types/LCamHdl_typeDiagnostics.md) | Diagnostics information of FB |
+| `diagnostics` | [`typeDiagnostics`](../types/LCamHdl_typeDiagnostics.md) | Diagnostics information of FB |
 
 ### In/Out Parameters
 
 | Parameter | Type | Description |
-|-----------|------|-------------|
-| `camProfile` | `ARRAY[*] OF` [`LCamHdl_typeInvSineElement`](../types/LCamHdl_typeInvSineElement.md) | Definition of the cam disk to be created |
+| --------- | ---- | ----------- |
+| `camProfile` | `ARRAY[*] OF` [`typeInvSineElement`](../types/LCamHdl_typeInvSineElement.md) | Definition of the cam disk to be created |
 | `cam` | `TO_Cam_10k` | Technology object cam disk (10k) |
 
 ### Status Codes
@@ -38,7 +38,7 @@ object of type `TO_Cam_10k` instead of `TO_Cam`.
 #### Operation Status Codes (16#0000 - 16#7FFF)
 
 | Code | Name | Description |
-|------|------|-------------|
+| ---- | ---- | ----------- |
 | 16#0000 | `STATUS_EXECUTION_FINISHED` | FB has created a cam successfully |
 | 16#7000 | `STATUS_NO_CALL` | No call of FB |
 | 16#7001 | `STATUS_FIRST_CALL` | First call of FB after enabling |
@@ -47,7 +47,7 @@ object of type `TO_Cam_10k` instead of `TO_Cam`.
 #### Error Status Codes (16#8000 - 16#FFFF)
 
 | Code | Name | Description |
-|------|------|-------------|
+| ---- | ---- | ----------- |
 | 16#8200 | `ERR_INVALID_PROFILE_TYPE` | Invalid profile type in element no., see diagnostics.errorElementNo |
 | 16#8201 | `ERR_CAM_POINTS_OUT_OF_BOUNDS` | Maximum number of cam points (10000) of the technology object was exceeded |
 | 16#8209 | `ERR_LEADING_RANGE` | The difference between start and end leading value is <= 0 in element no., see diagnostics.errorElementNo |

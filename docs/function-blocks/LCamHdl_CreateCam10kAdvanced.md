@@ -1,37 +1,37 @@
-# LCamHdl_CreateCam10kAdvanced
+# CreateCam10kAdvanced
 
-The function block `LCamHdl_CreateCam10kAdvanced` is a copy of the function
-block [LCamHdl_CreateCamAdvanced](./LCamHdl_CreateCamAdvanced.md). The "..10k.." version enables using a cam technology object of type `TO_Cam_10k` instead of `TO_Cam`, i.e. the maximum number of interpolation points increases from 1000 to 10000.
+The function block `CreateCam10kAdvanced` is a copy of the function
+block [CreateCamAdvanced](./LCamHdl_CreateCamAdvanced.md). The "..10k.." version enables using a cam technology object of type `TO_Cam_10k` instead of `TO_Cam`, i.e. the maximum number of interpolation points increases from 1000 to 10000.
 
 ## Interface
 
 ### Input Parameters
 
 | Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
+| --------- | ---- | ------- | ----------- |
 | `execute` | `BOOL` | `FALSE` | Rising edge starts action once |
 | `numberOfElements` | `INT` | `-1` | Number of used array elements of camProfile (-1 for whole array) |
 | `startSegmentIndex` | `INT` | `1` | Start index of cam segment data (1-50) |
 | `startPointIndex` | `INT` | `1` | Start index of cam point data (1-10000) |
-| `config` | [`LCamHdl_typeAdvancedConfig`](../types/LCamHdl_typeAdvancedConfig.md) | - | Config for interpolating the cam disk and deleting preceding or successive cam points/segments |
+| `config` | [`typeAdvancedConfig`](../types/LCamHdl_typeAdvancedConfig.md) | - | Config for interpolating the cam disk and deleting preceding or successive cam points/segments |
 
 ### Output Parameters
 
 | Parameter | Type | Description |
-|-----------|------|-------------|
+| --------- | ---- | ----------- |
 | `done` | `BOOL` | TRUE: Commanded action has been completed successfully |
 | `busy` | `BOOL` | TRUE: FB is not finished and new output values can be expected |
 | `error` | `BOOL` | TRUE: Rising edge informs that an error occurred during the execution of the FB |
-| `status` | [`LCamHdl_CreateCamAdvancedStatus`](../types/StatusCodes/LCamHdl_CreateCamAdvancedStatus.md) | 16#0000 - 16#7FFF: Status of the FB, 16#8000 - 16#FFFF: Error identification |
+| `status` | [`AdvancedStatus`](../types/StatusCodes/LCamHdl_AdvancedStatus.md) | 16#0000 - 16#7FFF: Status of the FB, 16#8000 - 16#FFFF: Error identification |
 | `nextSegmentIndex` | `INT` | Next "empty" segment index |
 | `nextPointIndex` | `INT` | Next "empty" point index |
-| `diagnostics` | [`LCamHdl_typeDiagnostics`](../types/LCamHdl_typeDiagnostics.md) | Diagnostics information of FB |
+| `diagnostics` | [`typeDiagnostics`](../types/LCamHdl_typeDiagnostics.md) | Diagnostics information of FB |
 
 ### In/Out Parameters
 
 | Parameter | Type | Description |
-|-----------|------|-------------|
-| `camProfile` | `ARRAY[*] OF` [`LCamHdl_typeAdvancedElement`](../types/LCamHdl_typeAdvancedElement.md) | Definition of the cam disk to be created |
+| --------- | ---- | ----------- |
+| `camProfile` | `ARRAY[*] OF` [`typeAdvancedElement`](../types/LCamHdl_typeAdvancedElement.md) | Definition of the cam disk to be created |
 | `cam` | `TO_Cam_10k` | Technology object cam disk (10k) |
 
 ### Status Codes
@@ -39,7 +39,7 @@ block [LCamHdl_CreateCamAdvanced](./LCamHdl_CreateCamAdvanced.md). The "..10k.."
 #### Operation Status Codes (16#0000 - 16#7FFF)
 
 | Code | Name | Description |
-|------|------|-------------|
+| ---- | ---- | ----------- |
 | 16#0000 | `STATUS_EXECUTION_FINISHED` | FB has created a cam successfully |
 | 16#7000 | `STATUS_NO_CALL` | No call of FB |
 | 16#7001 | `STATUS_FIRST_CALL` | First call of FB after enabling |
@@ -48,7 +48,7 @@ block [LCamHdl_CreateCamAdvanced](./LCamHdl_CreateCamAdvanced.md). The "..10k.."
 #### Error Status Codes (16#8000 - 16#FFFF)
 
 | Code | Name | Description |
-|------|------|-------------|
+| ---- | ---- | ----------- |
 | 16#8200 | `ERR_INVALID_PROFILE_TYPE` | Invalid profile type in element no., see diagnostics.errorElementNo |
 | 16#8201 | `ERR_CAM_POINTS_OUT_OF_BOUNDS` | Maximum number of cam points (10000) of the technology object was exceeded |
 | 16#8202 | `ERR_CAM_SEGMENTS_OUT_OF_BOUNDS` | Maximum number of cam segments (50) of the technology object was exceeded |

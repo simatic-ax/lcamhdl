@@ -1,8 +1,8 @@
-# LCamHdl_GetCamMaxSlaveDynamics
+# GetCamMaxSlaveDynamics
 
 ## Principle of operation
 
-The function `LCamHdl_GetCamMaxSlaveDynamics` calculates the resulting
+The function `GetCamMaxSlaveDynamics` calculates the resulting
 maximum following (slave) axis velocity, acceleration and jerk with respect to the
 given master velocity and the cam following values (min. and max of first, second
 and third derivatives).
@@ -12,26 +12,26 @@ accelerations or decelerations of the master axis are not taken into account. Th
 time base of the master and slave axis must be equal (e.g. seconds).
 
 The minimum and maximum following value derivatives can be determined with the
-function block `LCamHdl_GetCamFollowingMinMax`.
+function block `GetCamFollowingMinMax`.
 
 The function calculates the maximum output values using the following equations:
 
 ```math
-v_{Slave} = s' \cdot v_{Master} \newline
-a_{Slave} = s'' \cdot v_{Master}^2 \newline
-j_{Slave} = s''' \cdot v_{Master}^3
+v_{Slave} = s\rq \cdot v_{Master} \newline
+a_{Slave} = s\rq\rq \cdot v_{Master}^2 \newline
+j_{Slave} = s\rq\rq\rq \cdot v_{Master}^3
 ```
 
-$𝑠'$ - following axis first derivative (min / max) <br>
-$𝑠''$ - following axis second derivative (min / max) <br>
-$𝑠'''$ - following axis third derivative (min / max)
+$𝑠\rq$ - following axis first derivative (min / max) <br>
+$𝑠\rq\rq$ - following axis second derivative (min / max) <br>
+$𝑠\rq\rq\rq$ - following axis third derivative (min / max)
 
 ## Interface
 
 ### Input Parameters
 
 | Parameter | Type | Description |
-|-----------|------|-------------|
+| --------- | ---- | ----------- |
 | `firstDerivativeMin` | `LREAL` | Cam following value first derivative minimum |
 | `firstDerivativeMax` | `LREAL` | Cam following value first derivative maximum |
 | `secondDerivativeMin` | `LREAL` | Cam following value second derivative minimum |
@@ -43,7 +43,7 @@ $𝑠'''$ - following axis third derivative (min / max)
 ### Output Parameters
 
 | Parameter | Type | Description |
-|-----------|------|-------------|
+| --------- | ---- | ----------- |
 | `maxSlaveVelocity` | `LREAL` | Maximum slave velocity |
 | `maxSlaveAcceleration` | `LREAL` | Maximum slave acceleration |
 | `maxSlaveJerk` | `LREAL` | Maximum slave jerk |

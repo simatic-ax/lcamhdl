@@ -10,76 +10,71 @@ The library is organized into the following main components:
 
 ### Cam Creation Function Blocks
 
-- [`LCamHdl_CreateCamBasic`](./function-blocks/LCamHdl_CreateCamBasic.md): Creates a basic cam profile
-- [`LCamHdl_CreateCamBasedOnXYPoints`](./function-blocks/LCamHdl_CreateCamBasedOnXYPoints.md): Creates a cam profile based on XY points
-- [`LCamHdl_CreateCamAdvanced`](./function-blocks/LCamHdl_CreateCamAdvanced.md): Creates an advanced cam profile
+- [`CreateCamBasic`](./function-blocks/LCamHdl_CreateCamBasic.md): Creates a basic cam profile
+- [`CreateCamBasedOnXYPoints`](./function-blocks/LCamHdl_CreateCamBasedOnXYPoints.md): Creates a cam profile based on XY points
+- [`CreateCamAdvanced`](./function-blocks/LCamHdl_CreateCamAdvanced.md): Creates an advanced cam profile
 
 ### Cam (10k) Creation Function Blocks
 
-- [`LCamHdl_CreateCam10kBasic`](./function-blocks/LCamHdl_CreateCam10kBasic.md): Creates a basic 10k cam profile
-- [`LCamHdl_CreateCam10kBasedOnXYPoints`](./function-blocks/LCamHdl_CreateCam10kBasedOnXYPoints.md): Creates a 10k cam profile based on XY points
-- [`LCamHdl_CreateCam10kAdvanced`](./function-blocks/LCamHdl_CreateCam10kAdvanced.md): Creates an advanced 10k cam profile
+- [`CreateCam10kBasic`](./function-blocks/LCamHdl_CreateCam10kBasic.md): Creates a basic 10k cam profile
+- [`CreateCam10kBasedOnXYPoints`](./function-blocks/LCamHdl_CreateCam10kBasedOnXYPoints.md): Creates a 10k cam profile based on XY points
+- [`CreateCam10kAdvanced`](./function-blocks/LCamHdl_CreateCam10kAdvanced.md): Creates an advanced 10k cam profile
 
 ### Explanation of the profile types
 
-[`LCamHdl_CreateCamAdvanced`](./function-blocks/LCamHdl_CreateCamAdvanced.md) and [`LCamHdl_CreateCam10kAdvanced`](./function-blocks/LCamHdl_CreateCam10kAdvanced.md) use a `camProfileType` in their cam profile definition.
+[`CreateCamAdvanced`](./function-blocks/LCamHdl_CreateCamAdvanced.md) and [`CreateCam10kAdvanced`](./function-blocks/LCamHdl_CreateCam10kAdvanced.md) use a `camProfileType` in their cam profile definition.
 For a detailed overview about the different available profile types, see [Profile Types](./ProfileTypes.md).
 
 ### Additional Profiles for Advanced Cam Creation
 
-- [`LCamHdl_AddCamSine`](./function-blocks/LCamHdl_AddCamSine.md): Adds a sine element to a cam profile
-- [`LCamHdl_AddCamInvSine`](./function-blocks/LCamHdl_AddCamInvSine.md): Adds an inverse sine element to a cam profile
-- [`LCamHdl_AddCamDblHarmonic`](./function-blocks/LCamHdl_AddCamDblHarmonic.md): Adds a double harmonic element to a cam profile
-- [`LCamHdl_AddCamPolynomial`](./function-blocks/LCamHdl_AddCamPolynomial.md): Adds a polynomial element to a cam profile
+- [`AddCamSine`](./function-blocks/LCamHdl_AddCamSine.md): Adds a sine element to a cam profile
+- [`AddCamInvSine`](./function-blocks/LCamHdl_AddCamInvSine.md): Adds an inverse sine element to a cam profile
+- [`AddCamDblHarmonic`](./function-blocks/LCamHdl_AddCamDblHarmonic.md): Adds a double harmonic element to a cam profile
+- [`AddCamPolynomial`](./function-blocks/LCamHdl_AddCamPolynomial.md): Adds a polynomial element to a cam profile
 
 ### Additional Profiles for Advanced Cam (10k) Creation
 
-- [`LCamHdl_AddCam10kSine`](./function-blocks/LCamHdl_AddCam10kSine.md): Adds a sine element to a 10k cam profile
-- [`LCamHdl_AddCam10kInvSine`](./function-blocks/LCamHdl_AddCam10kInvSine.md): Adds an inverse sine element to a 10k cam profile
-- [`LCamHdl_AddCam10kDblHarmonic`](./function-blocks/LCamHdl_AddCam10kDblHarmonic.md): Adds a double harmonic element to a 10k cam profile
-- [`LCamHdl_AddCam10kPolynomial`](./function-blocks/LCamHdl_AddCam10kPolynomial.md): Adds a polynomial element to a 10k cam profile
+- [`AddCam10kSine`](./function-blocks/LCamHdl_AddCam10kSine.md): Adds a sine element to a 10k cam profile
+- [`AddCam10kInvSine`](./function-blocks/LCamHdl_AddCam10kInvSine.md): Adds an inverse sine element to a 10k cam profile
+- [`AddCam10kDblHarmonic`](./function-blocks/LCamHdl_AddCam10kDblHarmonic.md): Adds a double harmonic element to a 10k cam profile
+- [`AddCam10kPolynomial`](./function-blocks/LCamHdl_AddCam10kPolynomial.md): Adds a polynomial element to a 10k cam profile
 
 ### Additional Functions
 
-- [`LCamHdl_GetCamStatusWord`](./function-blocks/LCamHdl_GetCamStatusWord.md): Gets the status word of a cam profile
-- [`LCamHdl_GetCam10kStatusWord`](./function-blocks/LCamHdl_GetCam10kStatusWord.md): Gets the status word of a 10k cam profile
-- [`LCamHdl_GetCamFollowingMinMax`](./function-blocks/LCamHdl_GetCamFollowingMinMax.md): Gets the minimum and maximum following values of a cam profile
-- [`LCamHdl_GetCam10kFollowingMinMax`](./function-blocks/LCamHdl_GetCam10kFollowingMinMax.md): Gets the minimum and maximum following values of a 10k cam profile
-- [`LCamHdl_GetCamMaxSlaveDynamics`](./functions/LCamHdl_GetCamMaxSlaveDynamics.md): Gets the maximum slave dynamics of a cam profile
-- [`LCamHdl_GetCamMaxVeloMaster`](./functions/LCamHdl_GetCamMaxVeloMaster.md): Gets the maximum master velocity of a cam profile
+- [`GetCamStatusWord`](./function-blocks/LCamHdl_GetCamStatusWord.md): Gets the status word of a cam profile
+- [`GetCam10kStatusWord`](./function-blocks/LCamHdl_GetCam10kStatusWord.md): Gets the status word of a 10k cam profile
+- [`GetCamFollowingMinMax`](./function-blocks/LCamHdl_GetCamFollowingMinMax.md): Gets the minimum and maximum following values of a cam profile
+- [`GetCam10kFollowingMinMax`](./function-blocks/LCamHdl_GetCam10kFollowingMinMax.md): Gets the minimum and maximum following values of a 10k cam profile
+- [`GetCamMaxSlaveDynamics`](./functions/LCamHdl_GetCamMaxSlaveDynamics.md): Gets the maximum slave dynamics of a cam profile
+- [`GetCamMaxVeloMaster`](./functions/LCamHdl_GetCamMaxVeloMaster.md): Gets the maximum master velocity of a cam profile
 
 ### Data Types
 
-- [`LCamHdl_typeXYPoint`](./types/LCamHdl_typeXYPoint.md)
-- [`LCamHdl_typeBasicPoint`](./types/LCamHdl_typeBasicPoint.md)
-- [`LCamHdl_typeDiagnostics`](./types/LCamHdl_typeDiagnostics.md)
-- [`LCamHdl_typeAdvancedConfig`](./types/LCamHdl_typeAdvancedConfig.md)
-- [`LCamHdl_typeAdvancedElement`](./types/LCamHdl_typeAdvancedElement.md)
-- [`LCamHdl_typeSineConfig`](./types/LCamHdl_typeSineConfig.md)
-- [`LCamHdl_typeSineElement`](./types/LCamHdl_typeSineElement.md)
-- [`LCamHdl_typeInvSineConfig`](./types/LCamHdl_typeInvSineConfig.md)
-- [`LCamHdl_typeInvSineElement`](./types/LCamHdl_typeInvSineElement.md)
-- [`LCamHdl_typeDblHarmonicConfig`](./types/LCamHdl_typeDblHarmonicConfig.md)
-- [`LCamHdl_typeDblHarmonicElement`](./types/LCamHdl_typeDblHarmonicElement.md)
-- [`LCamHdl_typePolynomialConfig`](./types/LCamHdl_typePolynomialConfig.md)
-- [`LCamHdl_typePolynomialElement`](./types/LCamHdl_typePolynomialElement.md)
+- [`typeXYPoint`](./types/LCamHdl_typeXYPoint.md)
+- [`typeBasicPoint`](./types/LCamHdl_typeBasicPoint.md)
+- [`typeDiagnostics`](./types/LCamHdl_typeDiagnostics.md)
+- [`typeAdvancedConfig`](./types/LCamHdl_typeAdvancedConfig.md)
+- [`typeAdvancedElement`](./types/LCamHdl_typeAdvancedElement.md)
+- [`typeSineConfig`](./types/LCamHdl_typeSineConfig.md)
+- [`typeSineElement`](./types/LCamHdl_typeSineElement.md)
+- [`typeInvSineConfig`](./types/LCamHdl_typeInvSineConfig.md)
+- [`typeInvSineElement`](./types/LCamHdl_typeInvSineElement.md)
+- [`typeDblHarmonicConfig`](./types/LCamHdl_typeDblHarmonicConfig.md)
+- [`typeDblHarmonicElement`](./types/LCamHdl_typeDblHarmonicElement.md)
+- [`typePolynomialConfig`](./types/LCamHdl_typePolynomialConfig.md)
+- [`typePolynomialElement`](./types/LCamHdl_typePolynomialElement.md)
 
 ### Constants
 
-- [`LCamHdl_ConfigConstants`](./constants/LCamHdl_ConfigConstants.md): Configuration constants
-- [`LCamHdl_ProfileConstants`](./constants/LCamHdl_ProfileConstants.md): Profile constants
-- [`LCamHdl_AdditionalConstants`](./constants/LCamHdl_AdditionalConstants.md): Additional constants
+- [`ConfigConstants`](./constants/LCamHdl_ConfigConstants.md): Configuration constants
+- [`ProfileConstants`](./constants/LCamHdl_ProfileConstants.md): Profile constants
+- [`AdditionalConstants`](./constants/LCamHdl_AdditionalConstants.md): Additional constants
 
 ### Status Codes
 
-- [`LCamHdl_AddCamDblHarmonicsStatus`](types/StatusCodes/LCamHdl_AddCamDblHarmonicsStatus.md)
-- [`LCamHdl_AddCamInvSineStatus`](types/StatusCodes/LCamHdl_AddCamInvSineStatus.md)
-- [`LCamHdl_AddCamPolynomialStatus`](types/StatusCodes/LCamHdl_AddCamPolynomialStatus.md)
-- [`LCamHdl_AddCamSineStatus`](types/StatusCodes/LCamHdl_AddCamSineStatus.md)
-- [`LCamHdl_CreateCamAdvancedStatus`](types/StatusCodes/LCamHdl_CreateCamAdvancedStatus.md)
-- [`LCamHdl_CreateCamBasedOnXYPointsStatus`](types/StatusCodes/LCamHdl_CreateCamBasedOnXYPointsStatus.md)
-- [`LCamHdl_CreateCamBasicStatus`](types/StatusCodes/LCamHdl_CreateCamBasicStatus.md)
-- [`LCamHdl_GetCamFollowingMinMaxStatus`](types/StatusCodes/LCamHdl_GetCamFollowingMinMaxStatus.md)
+- [`BasicStatus`](types/StatusCodes/LCamHdl_BasicStatus.md)
+- [`AdvancedStatus`](types/StatusCodes/LCamHdl_AdvancedStatus.md)
+- [`GetCamFollowingMinMaxStatus`](types/StatusCodes/LCamHdl_GetCamFollowingMinMaxStatus.md)
 
 ## Migration from TIA Portal
 
@@ -99,7 +94,7 @@ This library has been migrated from TIA Portal to SIMATIC AX. The functionality 
 USING Simatic.Ax.LCamHdl;
 CONFIGURATION CamBasicConfiguration
     VAR_GLOBAL
-        profileBasic : ARRAY[1..8] OF LCamHdl_typeBasicPoint := [
+        profileBasic : ARRAY[1..8] OF typeBasicPoint := [
             (leadingValue := 100.0,
             followingValue := 0.0,
             velocityRatio := 1.0,
@@ -143,7 +138,7 @@ USING Simatic.Ax.LCamHdl;
 USING Siemens.Simatic.S71500.MotionControl.Native;
 PROGRAM CreateCamBasicProg
     VAR_EXTERNAL
-        profileBasic : ARRAY[1..8] OF LCamHdl_typeBasicPoint;
+        profileBasic : ARRAY[1..8] OF typeBasicPoint;
     END_VAR
 
     VAR_INPUT
@@ -152,7 +147,7 @@ PROGRAM CreateCamBasicProg
     END_VAR
 
     VAR
-        instCreateCamBasic : LCamHdl_CreateCamBasic;
+        instCreateCamBasic : CreateCamBasic;
         camRef : REF_TO TO_Cam;
         initialCall : BOOL := FALSE;
     END_VAR
@@ -174,7 +169,7 @@ PROGRAM CreateCamBasicProg
     ELSIF createCamBasic.error THEN
         ;// Error occurred
     END_IF;
-END_PROGRAM 
+END_PROGRAM
 ```
 
 ### Creating a Cam Profile Based on XY Points
@@ -225,7 +220,7 @@ PROGRAM CreateCamXYProg
     END_VAR
 
     VAR
-        createCamBasedOnXYPoints : LCamHdl_CreateCamBasedOnXYPoints;
+        createCamBasedOnXYPoints : CreateCamBasedOnXYPoints;
         camRef : REF_TO TO_Cam;
         initialCall : BOOL := FALSE;
     END_VAR

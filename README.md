@@ -55,9 +55,9 @@ USING Siemens.Simatic.S71500.MotionControl.Native;
 
 PROGRAM MainProgram
 VAR
-    camProfile : ARRAY[1..5] OF LCamHdl_typeBasicPoint;
+    camProfile : ARRAY[1..5] OF typeBasicPoint;
     cam : REF_TO TO_Cam;
-    createCamBasic : LCamHdl_CreateCamBasic;
+    createCamBasic : CreateCamBasic;
     execute : BOOL;
 END_VAR
 

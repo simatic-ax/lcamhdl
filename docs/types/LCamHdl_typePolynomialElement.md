@@ -1,7 +1,7 @@
 # LCamHdl_typePolynomialElement
 
 | Member | Type | Default Value | Description |
-|--------|------|---------------|-------------|
+| ------ | ---- | ------------- | ----------- |
 | `leadingValueStart` | `LREAL` | `0.0` | Leading value at the beginning of the element |
 | `leadingValueEnd` | `LREAL` | `0.0` | Leading value at the end of the element |
 | `followingValueStart` | `LREAL` | `0.0` | Following value at the beginning of the element |
@@ -18,6 +18,6 @@
 | `frequency` | `LREAL` | `0.0` | Sine frequency |
 | `phaseStart` | `LREAL` | `0.0` | Sine phase at start |
 | `phaseEnd` | `LREAL` | `0.0` | Sine phase at end |
-| `camProfileType` | `DINT` | `45` | Profile type of the cam disk element, 45: `LCAMHDL_ADD_PROFILE_POLY_TRIGONOMETRIC` (default) |
-| `polynomialMode` | `DINT` | `0` | Polynomial mode, 0: `LCAMHDL_POLY_MODE_BOUNDARY_VALUES_AND_POINT_OF_INFLECTION` (default) |
-| `sineMode` | `DINT` | `0` | Sine mode, 0: `LCAMHDL_SINE_MODE_PHASE_START_AND_END` (default) |
+| `camProfileType` | `DINT` | `45` | Profile type of the cam disk element, 45: `ADD_PROFILE_POLY_TRIGONOMETRIC` (default) |
+| `polynomialMode` | `DINT` | `0` | Polynomial mode, 0: `POLY_MODE_BOUNDARY_VALUES_AND_POINT_OF_INFLECTION` (default) |
+| `sineMode` | `DINT` | `0` | Sine mode, 0: `SINE_MODE_PHASE_START_AND_END` (default) |
