@@ -33,8 +33,18 @@ The library is a direct conversion of the functionally identical library [LCamHd
 
 Install with Apax:
 
+> If not yet done login to the GitHub registry first.
+> More information you'll find [here](https://github.com/simatic-ax/.github/blob/main/docs/personalaccesstoken.md)
+
+Pick the package matching your Motion Control version:
+
+| Package                    | Motion Control version |
+| -------------------------- | ---------------------- |
+| `@simatic-ax/lcamhdl-v9`   | MC v9.0                |
+| `@simatic-ax/lcamhdl-v10`  | MC v10.0               |
+
 ```cli
-apax add @simatic-ax/lcamhdl
+apax add @simatic-ax/lcamhdl-v10
 ```
 
 ## Namespace
