@@ -35,7 +35,7 @@ dependencies:
   "@ax/system": 10.0.24
 
 devDependencies:
-  "@ax/sdk": ^2504.0.0
+  "@ax/sdk": ^2510.0.0
 
 # Project variables
 variables:
