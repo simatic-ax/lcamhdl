@@ -1,7 +1,7 @@
 # CreateCam10kAdvanced
 
 The function block `CreateCam10kAdvanced` is a copy of the function
-block [CreateCamAdvanced](./LCamHdl_CreateCamAdvanced.md). The "..10k.." version enables using a cam technology object of type `TO_Cam_10k` instead of `TO_Cam`, i.e. the maximum number of interpolation points increases from 1000 to 10000.
+block [CreateCamAdvanced](./CreateCamAdvanced.md). The "..10k.." version enables using a cam technology object of type `TO_Cam_10k` instead of `TO_Cam`, i.e. the maximum number of interpolation points increases from 1000 to 10000.
 
 ## Interface
 
@@ -13,7 +13,7 @@ block [CreateCamAdvanced](./LCamHdl_CreateCamAdvanced.md). The "..10k.." version
 | `numberOfElements` | `INT` | `-1` | Number of used array elements of camProfile (-1 for whole array) |
 | `startSegmentIndex` | `INT` | `1` | Start index of cam segment data (1-50) |
 | `startPointIndex` | `INT` | `1` | Start index of cam point data (1-10000) |
-| `config` | [`typeAdvancedConfig`](../types/LCamHdl_typeAdvancedConfig.md) | - | Config for interpolating the cam disk and deleting preceding or successive cam points/segments |
+| `config` | [`typeAdvancedConfig`](../types/typeAdvancedConfig.md) | - | Config for interpolating the cam disk and deleting preceding or successive cam points/segments |
 
 ### Output Parameters
 
@@ -22,16 +22,16 @@ block [CreateCamAdvanced](./LCamHdl_CreateCamAdvanced.md). The "..10k.." version
 | `done` | `BOOL` | TRUE: Commanded action has been completed successfully |
 | `busy` | `BOOL` | TRUE: FB is not finished and new output values can be expected |
 | `error` | `BOOL` | TRUE: Rising edge informs that an error occurred during the execution of the FB |
-| `status` | [`AdvancedStatus`](../types/StatusCodes/LCamHdl_AdvancedStatus.md) | 16#0000 - 16#7FFF: Status of the FB, 16#8000 - 16#FFFF: Error identification |
+| `status` | [`AdvancedStatus`](../types/StatusCodes/AdvancedStatus.md) | 16#0000 - 16#7FFF: Status of the FB, 16#8000 - 16#FFFF: Error identification |
 | `nextSegmentIndex` | `INT` | Next "empty" segment index |
 | `nextPointIndex` | `INT` | Next "empty" point index |
-| `diagnostics` | [`typeDiagnostics`](../types/LCamHdl_typeDiagnostics.md) | Diagnostics information of FB |
+| `diagnostics` | [`typeDiagnostics`](../types/typeDiagnostics.md) | Diagnostics information of FB |
 
 ### In/Out Parameters
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
-| `camProfile` | `ARRAY[*] OF` [`typeAdvancedElement`](../types/LCamHdl_typeAdvancedElement.md) | Definition of the cam disk to be created |
+| `camProfile` | `ARRAY[*] OF` [`typeAdvancedElement`](../types/typeAdvancedElement.md) | Definition of the cam disk to be created |
 | `cam` | `TO_Cam_10k` | Technology object cam disk (10k) |
 
 ### Status Codes

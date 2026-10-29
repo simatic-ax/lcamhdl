@@ -38,14 +38,26 @@ Install with Apax:
 
 Pick the package matching your Motion Control version:
 
-| Package                    | Motion Control version |
-| -------------------------- | ---------------------- |
-| `@simatic-ax/lcamhdl-v9`   | MC v9.0                |
-| `@simatic-ax/lcamhdl-v10`  | MC v10.0               |
-
 ```cli
 apax add @simatic-ax/lcamhdl-v10
 ```
+
+## Package variants
+
+The library is published as one package per Motion Control version. All packages are built from the same source code.
+
+| Package                   | Motion Control version | CPU      |
+| ------------------------- | ---------------------- | -------- |
+| `@simatic-ax/lcamhdl-v10` | MC v10.0               | S7-1500T |
+| `@simatic-ax/lcamhdl-v9`  | MC v9.0                | S7-1500T |
+| `@simatic-ax/lcamhdl-v8`  | MC v8.0                | S7-1500T |
+
+- **v9 and v10:** provide the full functionality.
+- **v8:** [`GetCamFollowingMinMax`](docs/function-blocks/GetCamFollowingMinMax.md) and [`GetCam10kFollowingMinMax`](docs/function-blocks/GetCam10kFollowingMinMax.md) have no `applicationMode` input and no `thirdDerivativeMin` / `thirdDerivativeMax` outputs, because `MC_GetCamFollowingValueCyclic` in MC v8 does not support them. These blocks always determine the following value and its first and second derivatives.
+
+Use the package matching the Motion Control version of your project.
+
+The `apax.yml` of every published package is located in [packages](packages). The root `apax.yml` matches `@simatic-ax/lcamhdl-v10`. The `packages` folder holds package manifests only.
 
 ## Namespace
 

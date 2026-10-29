@@ -3,7 +3,7 @@
 ## Description
 
 The function block `CreateCam10kBasedOnXYPoints` is a copy of the
-function block [CreateCamBasedOnXYPoints](./LCamHdl_CreateCamBasedOnXYPoints.md). The "..10k.." version
+function block [CreateCamBasedOnXYPoints](./CreateCamBasedOnXYPoints.md). The "..10k.." version
 enables using a cam technology object of type TO_Cam_10k instead of TO_Cam,
 i.e. the maximum number of interpolation points increases from 1000 to 10000.
 
@@ -23,8 +23,8 @@ i.e. the maximum number of interpolation points increases from 1000 to 10000.
 | `done` | `BOOL` | TRUE: Commanded action has been completed successfully |
 | `busy` | `BOOL` | TRUE: FB is not finished and new output values can be expected |
 | `error` | `BOOL` | TRUE: Rising edge informs that an error occurred during the execution of the FB |
-| `status` | [`BasicStatus`](../types/StatusCodes/LCamHdl_BasicStatus.md) | 16#0000 - 16#7FFF: Status of the FB, 16#8000 - 16#FFFF: Error identification |
-| `diagnostics` | [`typeDiagnostics`](../types/LCamHdl_typeDiagnostics.md) | Diagnostics information of FB |
+| `status` | [`BasicStatus`](../types/StatusCodes/BasicStatus.md) | 16#0000 - 16#7FFF: Status of the FB, 16#8000 - 16#FFFF: Error identification |
+| `diagnostics` | [`typeDiagnostics`](../types/typeDiagnostics.md) | Diagnostics information of FB |
 
 ### In/Out Parameters
 

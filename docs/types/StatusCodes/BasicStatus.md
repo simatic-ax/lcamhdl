@@ -4,8 +4,8 @@
 
 The named value `BasicStatus` defines status codes for the following function blocks:
 
-- [CreateCamBasic](../../function-blocks/LCamHdl_CreateCamBasic.md) / [CreateCam10kBasic](../../function-blocks/LCamHdl_CreateCam10kBasic.md)
-- [CreateCamBasedOnXYPoints](../../function-blocks/LCamHdl_CreateCamBasedOnXYPoints.md) / [CreateCam10kBasedOnXYPoints](../../function-blocks/LCamHdl_CreateCam10kBasedOnXYPoints.md)
+- [CreateCamBasic](../../function-blocks/CreateCamBasic.md) / [CreateCam10kBasic](../../function-blocks/CreateCam10kBasic.md)
+- [CreateCamBasedOnXYPoints](../../function-blocks/CreateCamBasedOnXYPoints.md) / [CreateCam10kBasedOnXYPoints](../../function-blocks/CreateCam10kBasedOnXYPoints.md)
 
 Not every status code is used by every function block. The individual function block documentation lists the applicable subset.
 

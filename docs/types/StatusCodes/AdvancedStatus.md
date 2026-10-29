@@ -4,11 +4,11 @@
 
 The named value `AdvancedStatus` defines status codes for the following function blocks:
 
-- [CreateCamAdvanced](../../function-blocks/LCamHdl_CreateCamAdvanced.md) / [CreateCam10kAdvanced](../../function-blocks/LCamHdl_CreateCam10kAdvanced.md)
-- [AddCamDblHarmonic](../../function-blocks/LCamHdl_AddCamDblHarmonic.md) / [AddCam10kDblHarmonic](../../function-blocks/LCamHdl_AddCam10kDblHarmonic.md)
-- [AddCamInvSine](../../function-blocks/LCamHdl_AddCamInvSine.md) / [AddCam10kInvSine](../../function-blocks/LCamHdl_AddCam10kInvSine.md)
-- [AddCamPolynomial](../../function-blocks/LCamHdl_AddCamPolynomial.md) / [AddCam10kPolynomial](../../function-blocks/LCamHdl_AddCam10kPolynomial.md)
-- [AddCamSine](../../function-blocks/LCamHdl_AddCamSine.md) / [AddCam10kSine](../../function-blocks/LCamHdl_AddCam10kSine.md)
+- [CreateCamAdvanced](../../function-blocks/CreateCamAdvanced.md) / [CreateCam10kAdvanced](../../function-blocks/CreateCam10kAdvanced.md)
+- [AddCamDblHarmonic](../../function-blocks/AddCamDblHarmonic.md) / [AddCam10kDblHarmonic](../../function-blocks/AddCam10kDblHarmonic.md)
+- [AddCamInvSine](../../function-blocks/AddCamInvSine.md) / [AddCam10kInvSine](../../function-blocks/AddCam10kInvSine.md)
+- [AddCamPolynomial](../../function-blocks/AddCamPolynomial.md) / [AddCam10kPolynomial](../../function-blocks/AddCam10kPolynomial.md)
+- [AddCamSine](../../function-blocks/AddCamSine.md) / [AddCam10kSine](../../function-blocks/AddCam10kSine.md)
 
 Not every status code is used by every function block. The individual function block documentation lists the applicable subset.
 

@@ -1,0 +1,49 @@
+# General information
+name: "@simatic-ax/lcamhdl-v10"
+version: 0.0.0-placeholder
+type: lib
+keywords:
+  - library
+author: APC
+# Description will be displayed in the apax extension
+description: Create cam profiles at runtime.
+
+#URL to the repository
+repository:
+  type: git
+  url: https://github.com/simatic-ax/lcamhdl
+
+# Registry information, to other npm-registries where Apax packages are located
+# '@scope': 'registry-url'
+registries:
+  '@simatic-ax': 'https://npm.pkg.github.com/'
+
+# The public key(s) to verify dependencies. This ensures, that the package is
+# not tampered with.
+publicKeys:
+  "@simatic-ax":
+    "v1": "3792a7e926775425ccdd29ceed8c368c3008b5b33d7d5550b3cb1f58093e1dff"
+    "v2": "7af3e394eb2b285a3d99ab8e1f745cc6db75704b30a80393339c721a92ffffd9"
+
+# Catalog:
+catalogs:
+  "@ax-as/s7-catalog": ^2610.0.0
+# Dependencies
+devDependencies:
+  "@ax-as/s7-sdk": ^2610.0.0
+
+scripts:
+  mk:release: apax make -p MakeConfigName:release
+  mk:debug: apax make -p MakeConfigName:debug
+
+# Files, which will be shipped with the library
+files:
+  - 'README.md'
+  - 'LICENSE.md'
+  - 'docs'
+  - 'bin/release'
+  - '!bin/release/lastused*'
+
+dependencies:
+  "@ax-mc/s7-motioncontrol-v10-lib": ^11.0.27
+  "@ax-as/system-lib": ^11.0.205

@@ -1,4 +1,4 @@
-# LCamHdl_typePolynomialElement
+# typePolynomialElement
 
 | Member | Type | Default Value | Description |
 | ------ | ---- | ------------- | ----------- |

@@ -2,12 +2,12 @@
 
 ## Principle of operation
 
-The function LCamHdl_GetCamMaxVeloMaster calculates the maximum possible
+The function GetCamMaxVeloMaster calculates the maximum possible
 master velocity with respect to the given maximum dynamics(velocity, acceleration and jerk) of the following axis and the cam following values (min. and max first, second and third derivatives).
 
 Prerequisite is, that the cam disk is used at a constant master velocity - accelerations or decelerations of the master axis are not taken into account. The time base of the master and slave axis must be equal (e.g. seconds).
 
-The minimum and maximum following value derivatives can be determined with the function block LCamHdl_GetCamFollowingMinMax.
+The minimum and maximum following value derivatives can be determined with the function block GetCamFollowingMinMax.
 
 The function calculates the maximum master velocity using the following equations:
 

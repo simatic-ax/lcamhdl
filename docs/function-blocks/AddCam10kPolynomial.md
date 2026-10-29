@@ -1,19 +1,8 @@
-# AddCamSine
+# AddCam10kPolynomial
 
-## Principle of operation
-
-A sine or inclined sine segment can be created at runtime with a SIMATIC S7-
-1500T CPU with this type of function block. Gaps between the segments are interpolated by the runtime system with the interpolation method chosen in the selected technology object cam.
-
-A maximum number of 50 segments in a cam profile can be used to define a cam.
-
-The function block `AddCamSine` can be configured to delete preceding or
-successive cam segments and cam points. In addition it is possible to interpolate
-the cam disk at the end with the interpolateCam configuration bit.
-
-## Function Characteristics
-
-See [Function Characteristics](./Function_Characteristics.md)
+The function block `AddCam10kPolynomial` is a copy of the function
+block [AddCamPolynomial](./AddCamPolynomial.md). The "..10k.." version enables using a cam
+technology object of type `TO_Cam_10k` instead of `TO_Cam`.
 
 ## Interface
 
@@ -24,7 +13,7 @@ See [Function Characteristics](./Function_Characteristics.md)
 | `execute` | `BOOL` | `FALSE` | Rising edge starts action once |
 | `numberOfElements` | `INT` | `-1` | Number of used array elements of camProfile (-1 for whole array) |
 | `startSegmentIndex` | `INT` | `1` | Start index of cam segment data (1-50) |
-| `config` | [`typeSineConfig`](../types/LCamHdl_typeSineConfig.md) | - | Config for interpolating the cam disk and deleting preceding or successive cam points/segments |
+| `config` | [`typePolynomialConfig`](../types/typePolynomialConfig.md) | - | Config for interpolating the cam disk and deleting preceding or successive cam points/segments |
 
 ### Output Parameters
 
@@ -33,16 +22,16 @@ See [Function Characteristics](./Function_Characteristics.md)
 | `done` | `BOOL` | TRUE: Commanded action has been completed successfully |
 | `busy` | `BOOL` | TRUE: FB is not finished and new output values can be expected |
 | `error` | `BOOL` | TRUE: Rising edge informs that an error occurred during the execution of the FB |
-| `status` | [`AdvancedStatus`](../types/StatusCodes/LCamHdl_AdvancedStatus.md) | 16#0000 - 16#7FFF: Status of the FB, 16#8000 - 16#FFFF: Error identification |
+| `status` | [`AdvancedStatus`](../types/StatusCodes/AdvancedStatus.md) | 16#0000 - 16#7FFF: Status of the FB, 16#8000 - 16#FFFF: Error identification |
 | `nextSegmentIndex` | `INT` | Next "empty" segment index |
-| `diagnostics` | [`typeDiagnostics`](../types/LCamHdl_typeDiagnostics.md) | Diagnostics information of FB |
+| `diagnostics` | [`typeDiagnostics`](../types/typeDiagnostics.md) | Diagnostics information of FB |
 
 ### In/Out Parameters
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
-| `camProfile` | `ARRAY[*] OF` [`typeSineElement`](../types/LCamHdl_typeSineElement.md) | Definition of the cam disk to be created |
-| `cam` | `TO_Cam` | Technology object cam disk |
+| `camProfile` | `ARRAY[*] OF` [`typePolynomialElement`](../types/typePolynomialElement.md) | Definition of the cam disk to be created |
+| `cam` | `TO_Cam_10k` | Technology object cam disk (10k) |
 
 ### Status Codes
 
@@ -67,11 +56,10 @@ See [Function Characteristics](./Function_Characteristics.md)
 | 16#8220 | `ERR_INVALID_DELETE_OPTION` | Invalid delete option - check config |
 | 16#8222 | `ERR_INVALID_START_SEGMENT_INDEX` | Invalid startSegmentIndex, 1<=startSegmentIndex <=50 |
 | 16#8225 | `ERR_MISSING_PROFILE_DATA` | No profile data available |
-| 16#8240 | `ERR_INVALID_SINE_MODE` | Invalid profile mode in element no., see diagnostics.errorElementNo |
+| 16#8240 | `ERR_INVALID_POLYNOMIAL_MODE` | Invalid polynomial mode in element no., see diagnostics.errorElementNo |
 | 16#8245 | `ERR_INVALID_PHASE` | Invalid following start or end position in element no., see diagnostics.errorElementNo |
 | 16#8246 | `ERR_INVALID_PERIOD_LENGTH` | Invalid period length in element no., see diagnostics.errorElementNo |
 | 16#8247 | `ERR_INVALID_FREQUENCY` | Invalid frequency in element no., see diagnostics.errorElementNo |
-| 16#824A | `ERR_INVALID_INCLINATION_MODE` | Invalid inclination mode in element no., see diagnostics.errorElementNo |
 | 16#8400 | `ERR_CAM_IN_USE` | Cam is in use and can't be interpolated |
 | 16#8600 | `ERR_INTERPOLATE_CAM` | Error at interpolate cam – see return value of system function (diagnostics.subfunctionStatus) |
 | 16#8601 | `ERR_INVALID_STATE` | Internal error, invalid state |
