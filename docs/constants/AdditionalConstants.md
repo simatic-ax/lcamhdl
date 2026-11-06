@@ -44,11 +44,11 @@ These constants are primarily used with advanced cam element functions to specif
 
 ### Sine Functions
 
-- Used with [`AddCamSine`](../function-blocks/LCamHdl_AddCamSine.md), [`AddCamInvSine`](../function-blocks/LCamHdl_AddCamInvSine.md), [`AddCam10kSine`](../function-blocks/LCamHdl_AddCam10kSine.md) and [`AddCam10kInvSine`](../function-blocks/LCamHdl_AddCam10kInvSine.md)
+- Used with [`AddCamSine`](../function-blocks/AddCamSine.md), [`AddCamInvSine`](../function-blocks/AddCamInvSine.md), [`AddCam10kSine`](../function-blocks/AddCam10kSine.md) and [`AddCam10kInvSine`](../function-blocks/AddCam10kInvSine.md)
 - Control how phase, frequency, and period parameters are specified
 
 ### Polynomial Functions
 
-- Used with [`AddCamPolynomial`](../function-blocks/LCamHdl_AddCamPolynomial.md) / [`AddCam10kPolynomial`](../function-blocks/LCamHdl_AddCam10kPolynomial.md)
+- Used with [`AddCamPolynomial`](../function-blocks/AddCamPolynomial.md) / [`AddCam10kPolynomial`](../function-blocks/AddCam10kPolynomial.md)
 - Define mathematical constraints for polynomial coefficient calculation
 - Control jerk characteristics and inflection points

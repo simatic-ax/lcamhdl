@@ -3,7 +3,7 @@
 ## Description
 
 The function block `CreateCam10kBasic` is a copy of the function block
-[CreateCamBasic](./LCamHdl_CreateCamBasic.md). The "..10k.." version enables using a cam technology object of type `TO_Cam_10k` instead of `TO_Cam`.
+[CreateCamBasic](./CreateCamBasic.md). The "..10k.." version enables using a cam technology object of type `TO_Cam_10k` instead of `TO_Cam`.
 
 ## Interface
 
@@ -21,14 +21,14 @@ The function block `CreateCam10kBasic` is a copy of the function block
 | `done` | `BOOL` | TRUE: Commanded action has been completed successfully |
 | `busy` | `BOOL` | TRUE: FB is not finished and new output values can be expected |
 | `error` | `BOOL` | TRUE: Rising edge informs that an error occurred during the execution of the FB |
-| `status` | [`BasicStatus`](../types/StatusCodes/LCamHdl_BasicStatus.md) | 16#0000 - 16#7FFF: Status of the FB, 16#8000 - 16#FFFF: Error identification |
-| `diagnostics` | [`typeDiagnostics`](../types/LCamHdl_typeDiagnostics.md) | Diagnostics information of FB |
+| `status` | [`BasicStatus`](../types/StatusCodes/BasicStatus.md) | 16#0000 - 16#7FFF: Status of the FB, 16#8000 - 16#FFFF: Error identification |
+| `diagnostics` | [`typeDiagnostics`](../types/typeDiagnostics.md) | Diagnostics information of FB |
 
 ### In/Out Parameters
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
-| `camProfile` | `ARRAY[*] OF` [`typeBasicPoint`](../types/LCamHdl_typeBasicPoint.md) | Definition of the cam disk to be created |
+| `camProfile` | `ARRAY[*] OF` [`typeBasicPoint`](../types/typeBasicPoint.md) | Definition of the cam disk to be created |
 | `cam` | `TO_Cam_10k` | Technology object cam disk (10k) |
 
 ### Status Codes

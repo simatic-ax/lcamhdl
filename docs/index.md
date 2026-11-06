@@ -10,71 +10,71 @@ The library is organized into the following main components:
 
 ### Cam Creation Function Blocks
 
-- [`CreateCamBasic`](./function-blocks/LCamHdl_CreateCamBasic.md): Creates a basic cam profile
-- [`CreateCamBasedOnXYPoints`](./function-blocks/LCamHdl_CreateCamBasedOnXYPoints.md): Creates a cam profile based on XY points
-- [`CreateCamAdvanced`](./function-blocks/LCamHdl_CreateCamAdvanced.md): Creates an advanced cam profile
+- [`CreateCamBasic`](./function-blocks/CreateCamBasic.md): Creates a basic cam profile
+- [`CreateCamBasedOnXYPoints`](./function-blocks/CreateCamBasedOnXYPoints.md): Creates a cam profile based on XY points
+- [`CreateCamAdvanced`](./function-blocks/CreateCamAdvanced.md): Creates an advanced cam profile
 
 ### Cam (10k) Creation Function Blocks
 
-- [`CreateCam10kBasic`](./function-blocks/LCamHdl_CreateCam10kBasic.md): Creates a basic 10k cam profile
-- [`CreateCam10kBasedOnXYPoints`](./function-blocks/LCamHdl_CreateCam10kBasedOnXYPoints.md): Creates a 10k cam profile based on XY points
-- [`CreateCam10kAdvanced`](./function-blocks/LCamHdl_CreateCam10kAdvanced.md): Creates an advanced 10k cam profile
+- [`CreateCam10kBasic`](./function-blocks/CreateCam10kBasic.md): Creates a basic 10k cam profile
+- [`CreateCam10kBasedOnXYPoints`](./function-blocks/CreateCam10kBasedOnXYPoints.md): Creates a 10k cam profile based on XY points
+- [`CreateCam10kAdvanced`](./function-blocks/CreateCam10kAdvanced.md): Creates an advanced 10k cam profile
 
 ### Explanation of the profile types
 
-[`CreateCamAdvanced`](./function-blocks/LCamHdl_CreateCamAdvanced.md) and [`CreateCam10kAdvanced`](./function-blocks/LCamHdl_CreateCam10kAdvanced.md) use a `camProfileType` in their cam profile definition.
+[`CreateCamAdvanced`](./function-blocks/CreateCamAdvanced.md) and [`CreateCam10kAdvanced`](./function-blocks/CreateCam10kAdvanced.md) use a `camProfileType` in their cam profile definition.
 For a detailed overview about the different available profile types, see [Profile Types](./ProfileTypes.md).
 
 ### Additional Profiles for Advanced Cam Creation
 
-- [`AddCamSine`](./function-blocks/LCamHdl_AddCamSine.md): Adds a sine element to a cam profile
-- [`AddCamInvSine`](./function-blocks/LCamHdl_AddCamInvSine.md): Adds an inverse sine element to a cam profile
-- [`AddCamDblHarmonic`](./function-blocks/LCamHdl_AddCamDblHarmonic.md): Adds a double harmonic element to a cam profile
-- [`AddCamPolynomial`](./function-blocks/LCamHdl_AddCamPolynomial.md): Adds a polynomial element to a cam profile
+- [`AddCamSine`](./function-blocks/AddCamSine.md): Adds a sine element to a cam profile
+- [`AddCamInvSine`](./function-blocks/AddCamInvSine.md): Adds an inverse sine element to a cam profile
+- [`AddCamDblHarmonic`](./function-blocks/AddCamDblHarmonic.md): Adds a double harmonic element to a cam profile
+- [`AddCamPolynomial`](./function-blocks/AddCamPolynomial.md): Adds a polynomial element to a cam profile
 
 ### Additional Profiles for Advanced Cam (10k) Creation
 
-- [`AddCam10kSine`](./function-blocks/LCamHdl_AddCam10kSine.md): Adds a sine element to a 10k cam profile
-- [`AddCam10kInvSine`](./function-blocks/LCamHdl_AddCam10kInvSine.md): Adds an inverse sine element to a 10k cam profile
-- [`AddCam10kDblHarmonic`](./function-blocks/LCamHdl_AddCam10kDblHarmonic.md): Adds a double harmonic element to a 10k cam profile
-- [`AddCam10kPolynomial`](./function-blocks/LCamHdl_AddCam10kPolynomial.md): Adds a polynomial element to a 10k cam profile
+- [`AddCam10kSine`](./function-blocks/AddCam10kSine.md): Adds a sine element to a 10k cam profile
+- [`AddCam10kInvSine`](./function-blocks/AddCam10kInvSine.md): Adds an inverse sine element to a 10k cam profile
+- [`AddCam10kDblHarmonic`](./function-blocks/AddCam10kDblHarmonic.md): Adds a double harmonic element to a 10k cam profile
+- [`AddCam10kPolynomial`](./function-blocks/AddCam10kPolynomial.md): Adds a polynomial element to a 10k cam profile
 
 ### Additional Functions
 
-- [`GetCamStatusWord`](./function-blocks/LCamHdl_GetCamStatusWord.md): Gets the status word of a cam profile
-- [`GetCam10kStatusWord`](./function-blocks/LCamHdl_GetCam10kStatusWord.md): Gets the status word of a 10k cam profile
-- [`GetCamFollowingMinMax`](./function-blocks/LCamHdl_GetCamFollowingMinMax.md): Gets the minimum and maximum following values of a cam profile
-- [`GetCam10kFollowingMinMax`](./function-blocks/LCamHdl_GetCam10kFollowingMinMax.md): Gets the minimum and maximum following values of a 10k cam profile
-- [`GetCamMaxSlaveDynamics`](./functions/LCamHdl_GetCamMaxSlaveDynamics.md): Gets the maximum slave dynamics of a cam profile
-- [`GetCamMaxVeloMaster`](./functions/LCamHdl_GetCamMaxVeloMaster.md): Gets the maximum master velocity of a cam profile
+- [`GetCamStatusWord`](./function-blocks/GetCamStatusWord.md): Gets the status word of a cam profile
+- [`GetCam10kStatusWord`](./function-blocks/GetCam10kStatusWord.md): Gets the status word of a 10k cam profile
+- [`GetCamFollowingMinMax`](./function-blocks/GetCamFollowingMinMax.md): Gets the minimum and maximum following values of a cam profile
+- [`GetCam10kFollowingMinMax`](./function-blocks/GetCam10kFollowingMinMax.md): Gets the minimum and maximum following values of a 10k cam profile
+- [`GetCamMaxSlaveDynamics`](./functions/GetCamMaxSlaveDynamics.md): Gets the maximum slave dynamics of a cam profile
+- [`GetCamMaxVeloMaster`](./functions/GetCamMaxVeloMaster.md): Gets the maximum master velocity of a cam profile
 
 ### Data Types
 
-- [`typeXYPoint`](./types/LCamHdl_typeXYPoint.md)
-- [`typeBasicPoint`](./types/LCamHdl_typeBasicPoint.md)
-- [`typeDiagnostics`](./types/LCamHdl_typeDiagnostics.md)
-- [`typeAdvancedConfig`](./types/LCamHdl_typeAdvancedConfig.md)
-- [`typeAdvancedElement`](./types/LCamHdl_typeAdvancedElement.md)
-- [`typeSineConfig`](./types/LCamHdl_typeSineConfig.md)
-- [`typeSineElement`](./types/LCamHdl_typeSineElement.md)
-- [`typeInvSineConfig`](./types/LCamHdl_typeInvSineConfig.md)
-- [`typeInvSineElement`](./types/LCamHdl_typeInvSineElement.md)
-- [`typeDblHarmonicConfig`](./types/LCamHdl_typeDblHarmonicConfig.md)
-- [`typeDblHarmonicElement`](./types/LCamHdl_typeDblHarmonicElement.md)
-- [`typePolynomialConfig`](./types/LCamHdl_typePolynomialConfig.md)
-- [`typePolynomialElement`](./types/LCamHdl_typePolynomialElement.md)
+- [`typeXYPoint`](./types/typeXYPoint.md)
+- [`typeBasicPoint`](./types/typeBasicPoint.md)
+- [`typeDiagnostics`](./types/typeDiagnostics.md)
+- [`typeAdvancedConfig`](./types/typeAdvancedConfig.md)
+- [`typeAdvancedElement`](./types/typeAdvancedElement.md)
+- [`typeSineConfig`](./types/typeSineConfig.md)
+- [`typeSineElement`](./types/typeSineElement.md)
+- [`typeInvSineConfig`](./types/typeInvSineConfig.md)
+- [`typeInvSineElement`](./types/typeInvSineElement.md)
+- [`typeDblHarmonicConfig`](./types/typeDblHarmonicConfig.md)
+- [`typeDblHarmonicElement`](./types/typeDblHarmonicElement.md)
+- [`typePolynomialConfig`](./types/typePolynomialConfig.md)
+- [`typePolynomialElement`](./types/typePolynomialElement.md)
 
 ### Constants
 
-- [`ConfigConstants`](./constants/LCamHdl_ConfigConstants.md): Configuration constants
-- [`ProfileConstants`](./constants/LCamHdl_ProfileConstants.md): Profile constants
-- [`AdditionalConstants`](./constants/LCamHdl_AdditionalConstants.md): Additional constants
+- [`ConfigConstants`](./constants/ConfigConstants.md): Configuration constants
+- [`ProfileConstants`](./constants/ProfileConstants.md): Profile constants
+- [`AdditionalConstants`](./constants/AdditionalConstants.md): Additional constants
 
 ### Status Codes
 
-- [`BasicStatus`](types/StatusCodes/LCamHdl_BasicStatus.md)
-- [`AdvancedStatus`](types/StatusCodes/LCamHdl_AdvancedStatus.md)
-- [`GetCamFollowingMinMaxStatus`](types/StatusCodes/LCamHdl_GetCamFollowingMinMaxStatus.md)
+- [`BasicStatus`](types/StatusCodes/BasicStatus.md)
+- [`AdvancedStatus`](types/StatusCodes/AdvancedStatus.md)
+- [`GetCamFollowingMinMaxStatus`](types/StatusCodes/GetCamFollowingMinMaxStatus.md)
 
 ## Migration from TIA Portal
 

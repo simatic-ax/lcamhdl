@@ -1,5 +1,5 @@
 # General information
-name: "@simatic-ax/lcamhdl"
+name: "@simatic-ax/lcamhdl-v10"
 version: 0.0.0-placeholder
 type: lib
 keywords:
@@ -7,10 +7,6 @@ keywords:
 author: APC
 # Description will be displayed in the apax extension
 description: Create cam profiles at runtime.
-# Targets to be compiled with 'apax build'
-targets:
-  - "1500"
-  - llvm
 
 #URL to the repository
 repository:
@@ -31,23 +27,23 @@ publicKeys:
 
 # Catalog:
 catalogs:
-  "@ax/simatic-ax": ^2510.0.0
+  "@ax-as/s7-catalog": ^2610.0.0
 # Dependencies
 devDependencies:
-  "@ax/sdk": ^2510.0.0
+  "@ax-as/s7-sdk": ^2610.0.0
 
-# Environment variables
-variables:
-  APAX_BUILD_ARGS:
-    - "--debug" # Generate debug information for target "1500"
+scripts:
+  mk:release: apax make -p MakeConfigName:release
+  mk:debug: apax make -p MakeConfigName:debug
 
 # Files, which will be shipped with the library
 files:
   - 'README.md'
   - 'LICENSE.md'
   - 'docs'
-  - 'bin'
+  - 'bin/release'
+  - '!bin/release/lastused*'
 
 dependencies:
-  "@ax/simatic-motioncontrol-native-v10": ^10.0.9
-  "@ax/system": ^10.2.7
+  "@ax-mc/s7-motioncontrol-v10-lib": ^11.0.27
+  "@ax-as/system-lib": ^11.0.205
