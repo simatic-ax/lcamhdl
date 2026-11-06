@@ -1,7 +1,7 @@
 # GetCam10kStatusWord
 
 The function block `GetCam10kStatusWord` is a copy of the function
-block [GetCamStatusWord](./LCamHdl_GetCamStatusWord.md). The "..10k.." version enables using a cam
+block [GetCamStatusWord](./GetCamStatusWord.md). The "..10k.." version enables using a cam
 technology object of type `TO_Cam_10k` instead of `TO_Cam`.
 
 ## Interface
@@ -34,5 +34,5 @@ This function block has been migrated from TIA Portal to SIMATIC AX. The functio
 
 ## See Also
 
-- [GetCamStatusWord](./LCamHdl_GetCamStatusWord.md)
-- [GetCam10kFollowingMinMax](./LCamHdl_GetCam10kFollowingMinMax.md)
+- [GetCamStatusWord](./GetCamStatusWord.md)
+- [GetCam10kFollowingMinMax](./GetCam10kFollowingMinMax.md)

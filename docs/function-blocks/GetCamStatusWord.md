@@ -38,7 +38,7 @@ PROGRAM Use10kStatusProgram
     VAR
         camRef : REF_TO TO_Cam;
         initialCall : BOOL := FALSE;
-        getCamStatus : LCamHdl_GetCam10kStatusWord;
+        getCamStatus : GetCam10kStatusWord;
         camInUse : BOOL;
         camError : BOOL;
         camInterpolated : BOOL;
